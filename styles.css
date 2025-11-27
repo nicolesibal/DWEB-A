@@ -1,0 +1,105 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('orange.jpg');  /* Ensure the correct path for the image */
+    background-size: cover;  /* Ensures the background image covers the entire page */
+    background-position: center;  /* Keeps the image centered */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the calculator */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: rgba(244, 244, 244, 0.8);  /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+h1 {
+    text-align: center;
+    color: #ff8640; /* Tomato red for the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);  /* Soft shadow effect */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 2px solid #ddd;  /* Slightly thicker border for the table */
+}
+
+table th, table td {
+    padding: 12px;  /* Increased padding for a cleaner look */
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #fa8130; /* Tomato red for the header */
+    color: white;
+}
+
+table td {
+    background-color: #fff;
+}
+
+table tr:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+    cursor: pointer;
+}
+
+/* Additional Information Styling */
+h3, p {
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Unordered List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+    table th, table td {
+        font-size: 14px;  /* Smaller font size for mobile screens */
+    }
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 157, 44);
+    text-align: center;
+    padding: 12px 0;
+}
+
+.footer-content {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
