@@ -1,52 +1,163 @@
-/* 🍊 Background Image */
+/* ------------------- */
+/* Reset & Body        */
+/* ------------------- */
 body {
-    background: url('orange.jpg') no-repeat center center fixed;
-    background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background: #fff8f0;
 }
 
-/* 🍊 Main Container With Shadow */
-.container {
-    width: 60%;
-    margin: 40px auto;
-    background: rgb(244, 215, 196);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
-    animation: fadeIn 1s ease-in-out;
+/* ------------------- */
+/* Navigation Bar FIXED */
+/* ------------------- */
+nav {
+    width: 100%;
+    background-color: #ff8c00;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* store name left, links right */
+    align-items: center;
+    border-bottom: 4px solid #e67300;
 }
 
-/* 🔤 Headings */
-h1, h2 {
-    color: #d2691e;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+.nav-left .store-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
 }
 
-/* Center the main heading */
-h1.centered {
+.nav-links {
+    display: flex;
+    gap: 30px; /* spacing between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: #dab88e;
+}
+
+/* ------------------- */
+/* Divider (HR)        */
+/* ------------------- */
+hr {
+    border: none;
+    height: 4px;
+    background: #d2691e;
+    box-shadow: 0 0 5px #d2691e;
+    margin: 25px 0;
+    border-radius: 2px;
+}
+
+/* ------------------- */
+/* Hero Section (Homepage) */
+/* ------------------- */
+.hero {
     text-align: center;
 }
 
-/* 🏷️ Form Labels */
+body.home-page .container {
+    width: 60%;
+    margin: 60px auto 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+body.home-page .hero h1 {
+    font-size: 2.5rem;
+    color: #d2691e;
+    margin-bottom: 20px;
+}
+
+body.home-page .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Description Paragraph */
+.description {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* ------------------- */
+/* Background for Home Page */
+/* ------------------- */
+body.home-page {
+    background: url('orange.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Center main content */
+body.home-page .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+body.home-page .hero {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+/* ------------------- */
+/* Store Page Styles   */
+/* ------------------- */
+body.store-page {
+    background: url('orange.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 60%;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(160, 91, 18);
+}
+
+h1, h2 {
+    color: #d2691e;
+    text-align: center;
+}
+
 label {
     font-weight: bold;
     margin-top: 10px;
     display: block;
 }
 
-/* 📥 Inputs & Selects */
 input, select {
     width: 100%;
     padding: 10px;
     margin: 5px 0 15px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 16px;
 }
 
-/* 🔘 Submit Button */
 button {
     padding: 10px 18px;
     background: #ff8c00;
@@ -55,15 +166,50 @@ button {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background: #e67e00;
-    transform: scale(1.05);
 }
 
-/* 🍊 Animated Prep Text */
+/* ------------------- */
+/* Stock Monitoring Table */
+/* ------------------- */
+table.stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+table.stock-table th,
+table.stock-table td {
+    border: 2px solid #d2691e;
+    padding: 10px;
+    text-align: center;
+}
+
+table.stock-table th {
+    background-color: #ff8c00;
+    color: white;
+    font-weight: bold;
+}
+
+table.stock-table tr:nth-child(even) {
+    background-color: #fff5e6;
+}
+
+table.stock-table tr:nth-child(odd) {
+    background-color: #ffe6cc;
+}
+
+/* Highlight low stock */
+table.stock-table tr.low-stock {
+    background-color: #ffcccc;
+}
+
+/* Prep messages */
 .prep.animation {
     animation: slideIn 0.8s ease-out;
     background-color: #fff3e0;
@@ -72,13 +218,13 @@ button:hover {
     margin-bottom: 5px;
 }
 
-/* ⚠️ Validation Error Text */
+/* Errors */
 .error {
     color: red;
     font-weight: bold;
 }
 
-/* 🦶 Footer */
+/* Footer */
 footer {
     margin-top: 30px;
     background: #ff8c00;
@@ -86,12 +232,12 @@ footer {
     text-align: center;
     padding: 15px;
     font-weight: bold;
-    position: relative; /* optional if you want it pinned at bottom */
     width: 100%;
 }
 
-/* ✨ Keyframe Animations */
-/* Fade-in for the whole container */
+/* ------------------- */
+/* Animations          */
+/* ------------------- */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -103,7 +249,6 @@ footer {
     }
 }
 
-/* Slide-in for each orange preparation line */
 @keyframes slideIn {
     from {
         opacity: 0;
